@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangjiabao.zhangjiabao.all.mapper.UserMapperAPI" >
+    <!--public User getUserInfo();;;-->
+<select id="getUserInfo" resultType="com.zhangjiabao.zhangjiabao.all.bean.User">
+    select * from UserInfo where userid=1;
+
+</select>
+
+</mapper>

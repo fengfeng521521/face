@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Class-Path: spring-jdbc-5.1.8.RELEASE.jar jackson-core-2.9.9.jar mysql
+ -connector-java-8.0.16.jar spring-context-5.1.8.RELEASE.jar hibernate
+ -validator-6.0.17.Final.jar snakeyaml-1.23.jar jackson-datatype-jdk8-
+ 2.9.9.jar jaxws-api-2.3.1.jar jackson-datatype-jsr310-2.9.9.jar sprin
+ g-ws-core-3.0.7.RELEASE.jar logback-classic-1.2.3.jar slf4j-api-1.7.2
+ 6.jar spring-beans-5.1.8.RELEASE.jar classmate-1.4.0.jar javax.xml.so
+ ap-api-1.4.0.jar spring-core-5.1.8.RELEASE.jar mybatis-3.5.2.jar spri
+ ng-tx-5.1.8.RELEASE.jar tomcat-embed-websocket-9.0.21.jar log4j-api-2
+ .11.2.jar spring-oxm-5.1.8.RELEASE.jar mybatis-spring-2.0.2.jar commo
+ ns-io-2.5.jar jackson-databind-2.9.9.jar jackson-module-parameter-nam
+ es-2.9.9.jar spring-boot-starter-tomcat-2.1.6.RELEASE.jar logback-cor
+ e-1.2.3.jar HikariCP-3.2.0.jar jstl-1.2.jar saaj-impl-1.5.0.jar sprin
+ g-boot-starter-jdbc-2.1.6.RELEASE.jar spring-boot-starter-web-2.1.6.R
+ ELEASE.jar tomcat-annotations-api-9.0.21.jar jackson-annotations-2.9.
+ 0.jar stax-ex-1.8.jar javax.annotation-api-1.3.2.jar mybatis-spring-b
+ oot-starter-2.1.0.jar jul-to-slf4j-1.7.26.jar jboss-logging-3.3.2.Fin
+ al.jar spring-jcl-5.1.8.RELEASE.jar spring-webmvc-5.1.8.RELEASE.jar s
+ pring-boot-starter-json-2.1.6.RELEASE.jar spring-xml-3.0.7.RELEASE.ja
+ r spring-aop-5.1.8.RELEASE.jar spring-expression-5.1.8.RELEASE.jar mi
+ mepull-1.9.11.jar jaxb-api-2.3.1.jar mybatis-spring-boot-autoconfigur
+ e-2.1.0.jar spring-boot-starter-logging-2.1.6.RELEASE.jar validation-
+ api-2.0.1.Final.jar spring-boot-2.1.6.RELEASE.jar spring-boot-starter
+ -2.1.6.RELEASE.jar tomcat-embed-core-9.0.21.jar log4j-to-slf4j-2.11.2
+ .jar spring-boot-starter-web-services-2.1.6.RELEASE.jar javax.activat
+ ion-api-1.2.0.jar spring-boot-autoconfigure-2.1.6.RELEASE.jar tomcat-
+ embed-el-9.0.21.jar spring-web-5.1.8.RELEASE.jar
+Main-Class: com.zhangjiabao.zhangjiabao.ZhangjiabaoApplication
+

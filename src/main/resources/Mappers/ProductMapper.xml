@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangjiabao.zhangjiabao.all.mapper.ProductAPI">
+
+    <!--品牌信息表-->
+    <insert id="insertProductBrandInfo" parameterType="com.zhangjiabao.zhangjiabao.all.bean.Product_brand_info">
+        insert into  product_brand_info values (#{brand_id},#{brand_name},#{telephone},#{brand_web},#{brand_logo},#{brand_desc},#{brand_status},#{brand_order},#{modified_time});
+    </insert>
+
+    <!--分类信息表-->
+    <insert id="insertProductCategory" parameterType="com.zhangjiabao.zhangjiabao.all.bean.Product_category">
+        insert into  product_category values (#{category_id},#{category_name},#{category_code},#{parent_id},#{category_level},#{category_status},#{modified_time});
+    </insert>
+    <!--供应商信息表-->
+    <insert id="insertProductSupplierInfo" parameterType="com.zhangjiabao.zhangjiabao.all.bean.Product_supplierinfo">
+        insert into  product_supplierinfo values (#{supplier_id},#{product_id},#{supplier_code},#{supplier_name},#{supplier_type},#{link_man},#{phone_number},#{bank_name},#{bank_account},#{address},#{supplier_status},#{modified_time});
+    </insert>
+
+
+    <!--商品评论表-->
+    <insert id="insertProductComment" parameterType="com.zhangjiabao.zhangjiabao.all.bean.Product_comment">
+        insert into  product_comment values (#{comment_id},#{product_id},#{order_id},#{customer_id},#{title},#{content},#{audit_status},#{audit_time},#{modified_time});
+    </insert>
+
+
+
+    <!--商品信息表-->
+    <insert id="insertProductInfo" parameterType="com.zhangjiabao.zhangjiabao.all.bean.Product_info">
+        insert into  product_info values (#{product_id},#{product_core},#{product_name},#{bar_code},#{brand_id},#{one_category_id},#{two_category_id},#{three_category_id},#{supplier_id},#{price},#{average_cost},#{publish_status},#{audit_status},#{weight},#{length},#{height},#{width},#{color_type},#{production_date},#{shelf_life},#{descript},#{indate},#{modified_time});
+    </insert>
+
+
+    <!--显示商品信息 -->
+    <select id="selectAllProductInfo" resultType="com.zhangjiabao.zhangjiabao.all.bean.Product_info">
+        select * from  product_info;
+
+
+
+    </select>
+
+
+
+
+
+
+    <!--商品图片表-->
+    <insert id="insertProductPicinfo" parameterType="com.zhangjiabao.zhangjiabao.all.bean.Product_pic_info">
+        insert into  product_pic_info values (#{product_pic_id},#{product_id},#{pic_desc},#{pic_url},#{is_master},#{pic_order},#{pic_status},#{modified_time});
+    </insert>
+
+</mapper>

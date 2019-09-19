@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangjiabao.zhangjiabao.all.mapper.CustomerMapper">
+<insert id="addCustomerInfo" parameterType="com.zhangjiabao.zhangjiabao.all.bean.CustomerInfo">
+    insert into customer_info values (#{customer_inf_id},#{customer_id},#{school_name},#{customer_name},#{identity_card_type},#{identity_card_no},#{mobile_phone},#{customer_email},#{gender},#{user_point},#{register_time},#{weixin},#{customer_level},#{user_money},#{modified_time});
+</insert>
+
+</mapper>

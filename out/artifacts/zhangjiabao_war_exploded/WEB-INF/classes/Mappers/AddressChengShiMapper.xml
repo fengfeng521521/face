@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangjiabao.zhangjiabao.all.mapper.AddressChengShiMapperAPI">
+
+<!-- public AddressOnlyChengShi selectAllProvince();
+    public AddressOnlyChengShi selectAllCityByProvinceCode(String provinceCode );
+    public AddressOnlyChengShi selectAllCountyByCityCode(String cityCode);
+    全部为查询
+    -->
+<select id="selectAllProvince" resultType="com.zhangjiabao.zhangjiabao.all.bean.AddressOnlyChengShi">
+SELECT * from base_area where AREA_PARENT_ID=1;
+
+</select>
+
+
+</mapper>
