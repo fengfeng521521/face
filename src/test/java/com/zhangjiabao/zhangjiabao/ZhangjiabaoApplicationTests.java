@@ -2,7 +2,7 @@ package com.zhangjiabao.zhangjiabao;
 
 import com.zhangjiabao.zhangjiabao.all.bean.*;
 import com.zhangjiabao.zhangjiabao.all.mapper.CustomerMapper;
-import com.zhangjiabao.zhangjiabao.all.mapper.ProductAPI;
+import com.zhangjiabao.zhangjiabao.all.mapper.ProductMapperAPI;
 import com.zhangjiabao.zhangjiabao.all.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,7 +18,14 @@ import java.util.List;
 @SpringBootTest
 public class ZhangjiabaoApplicationTests {
 
-
+/*
+*
+*
+* github账号：邮箱xieyaru0810@163.com  用户名:onlyOneYR 密码：xieyaru123*
+*
+*
+*
+* */
     @Resource
     UserService userService;
 
@@ -26,7 +33,7 @@ public class ZhangjiabaoApplicationTests {
     CustomerMapper customerMapper;
 
     @Resource
-    ProductAPI productAPI;
+    ProductMapperAPI productAPI;
 
 
     @Test
@@ -466,7 +473,7 @@ public class ZhangjiabaoApplicationTests {
         product_info.setHeight(12.56);
         product_info.setWidth(34.66);
         product_info.setLength(34.65);
-        product_info.setColor_type(1);
+        product_info.setColor_type("红");
          product_info.setProduction_date(new Date());
         product_info.setShelf_life(100);
         product_info.setDescript("九成新");
@@ -571,7 +578,7 @@ public class ZhangjiabaoApplicationTests {
         product_info.setHeight(11.56);
         product_info.setWidth(15.66);
         product_info.setLength(30.65);
-        product_info.setColor_type(1);
+        product_info.setColor_type("黄");
         product_info.setProduction_date(new Date());
         product_info.setShelf_life(100);
         product_info.setDescript("九成新");
@@ -603,7 +610,7 @@ public class ZhangjiabaoApplicationTests {
         Product_supplierinfo product_supplierinfo=new Product_supplierinfo();
 
         product_supplierinfo.setSupplier_code("919"+new Date().getYear()+"5815");
-        product_supplierinfo.setProduct_id(18);
+        product_supplierinfo.setInfosupid(2);
 
         product_supplierinfo.setSupplier_name("老谭小商品专卖店");
         product_supplierinfo.setSupplier_type("0");

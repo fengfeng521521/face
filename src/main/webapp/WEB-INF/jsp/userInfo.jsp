@@ -39,8 +39,8 @@
             </tr>
             <tr>
                 <th>校  名：</th>
-                <td><select id="schoolId" name="school_name" class="school_name">
-                    <option value="-1">----请选择----</option>
+                <td><select id="schoolId" name="school_name" class="school_name" >
+                    <option value="-1">---请选择---</option>
                 </select></td>
             </tr>
             <tr>
@@ -114,13 +114,15 @@
 <!--main end-->
 <script type="text/javascript">
     $(function(){
+        //学校
+        getSchool(-1);
         checkAllIsNull();
         //省市区三级联动初始化
         getProvinceFun(-1,-1,-1);
 
         //刷新界面
         getAllAddress();
-        getSchool();
+
         //提示提交信息为何出错
 
     });
@@ -312,30 +314,35 @@
     
     
     //处理异步学校
-   function getSchool(schId){
+   function getSchool(schId) {
        $.ajax({
-           "url":"${pageContext.request.contextPath}/showAddress/school",
-           "data":"",
-           "type":"GET",
-           "dataType":"json",
-           "success":function(obj){
-               if (obj.state==1) {
-               $("#receiverDistrict").html("<option>--请选择--</option>");
-               for(var i=0;i<obj.data.length;i++){
-                   var option = new Option(obj.data[i].name,obj.data[i].id);
-                   $("#schoolId").append(option);
-               }
+           "url": "${pageContext.request.contextPath}/showAddress/school",
+           "data": "",
+           "type": "GET",
+           "dataType": "json",
+           "success": function (obj) {
+
+               console.log(obj.state + "=obj.state");
+
+               if (obj.state == 1) {
+
+                   $("#schoolId").html("<option value='-1'>----请选择-----</option>");
+                   for (var i = 0; i < obj.data.length; i++) {
+
+                       var option = new Option(obj.data[i].name, obj.data[i].id);
+                       $("#schoolId").append(option);
+                   }
 
                }
                //
-               if(schId!=-1){
+               if (schId != -1) {
                    $("#schoolId").val(schId);
                }
            }
        });
-
-
    }
+
+
 
 </script>
 <!--footer start-->

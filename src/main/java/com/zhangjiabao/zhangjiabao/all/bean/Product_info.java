@@ -28,7 +28,7 @@ public class Product_info {
     private Double height;
     private Double width;
     //color_type
-    private Integer color_type;
+    private String color_type;
     private Date production_date;
     private Integer shelf_life;
     private String descript;
@@ -171,11 +171,11 @@ public class Product_info {
         this.width = width;
     }
 
-    public Integer getColor_type() {
+    public String getColor_type() {
         return color_type;
     }
 
-    public void setColor_type(Integer color_type) {
+    public void setColor_type(String color_type) {
         this.color_type = color_type;
     }
 

@@ -6,7 +6,7 @@ import java.util.Objects;
 public class Product_supplierinfo {
 
     private Integer supplier_id;
-    private Integer product_id;
+    private Integer infosupid;
     private String supplier_code;
     private String supplier_name;
     private String supplier_type;
@@ -106,12 +106,12 @@ public class Product_supplierinfo {
         this.modified_time = modified_time;
     }
 
-    public Integer getProduct_id() {
-        return product_id;
+    public Integer getInfosupid() {
+        return infosupid;
     }
 
-    public void setProduct_id(Integer product_id) {
-        this.product_id = product_id;
+    public void setInfosupid(Integer infosupid) {
+        this.infosupid = infosupid;
     }
 
     @Override
@@ -120,7 +120,7 @@ public class Product_supplierinfo {
         if (o == null || getClass() != o.getClass()) return false;
         Product_supplierinfo that = (Product_supplierinfo) o;
         return Objects.equals(supplier_id, that.supplier_id) &&
-                Objects.equals(product_id, that.product_id) &&
+                Objects.equals(infosupid, that.infosupid) &&
                 Objects.equals(supplier_code, that.supplier_code) &&
                 Objects.equals(supplier_name, that.supplier_name) &&
                 Objects.equals(supplier_type, that.supplier_type) &&
@@ -135,14 +135,14 @@ public class Product_supplierinfo {
 
     @Override
     public int hashCode() {
-        return Objects.hash(supplier_id, product_id, supplier_code, supplier_name, supplier_type, link_man, phone_number, bank_name, bank_account, address, supplier_status, modified_time);
+        return Objects.hash(supplier_id, infosupid, supplier_code, supplier_name, supplier_type, link_man, phone_number, bank_name, bank_account, address, supplier_status, modified_time);
     }
 
     @Override
     public String toString() {
         return "Product_supplierinfo{" +
                 "supplier_id=" + supplier_id +
-                ", product_id=" + product_id +
+                ", infosupid=" + infosupid +
                 ", supplier_code='" + supplier_code + '\'' +
                 ", supplier_name='" + supplier_name + '\'' +
                 ", supplier_type='" + supplier_type + '\'' +
@@ -155,5 +155,4 @@ public class Product_supplierinfo {
                 ", modified_time=" + modified_time +
                 '}';
     }
-
 }

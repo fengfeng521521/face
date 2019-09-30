@@ -87,7 +87,6 @@
 	})
 </script>
 <!--main end-->
-
 <!--footer start-->
 <jsp:include page="footer.jsp"></jsp:include>
 <!--footer end-->
