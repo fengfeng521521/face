@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangjiabao.zhangjiabao.all.mapper.CustomerMapper">
+
+    <insert id="addCustomer_addr" parameterType="com.zhangjiabao.zhangjiabao.all.bean.Customer_addr">
+        insert into  customer_addr values (#{customer_addr_id},#{customer_id},#{zip},#{province},#{city},#{district},#{address},#{is_default},#{modified_time});
+    </insert>
+
+</mapper>
