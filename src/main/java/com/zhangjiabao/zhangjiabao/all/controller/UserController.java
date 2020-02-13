@@ -198,14 +198,14 @@ public class UserController {
     }
 
     //验证码图片展示
-    @GetMapping("/img")
+    @GetMapping("/past/img")
     public String image() {
         return "verify_code";
     }
 
 
     //获取验证码图片并显示在页面上
-    @RequestMapping(value="/image",method= RequestMethod.GET)
+    @RequestMapping(value="/past/image",method= RequestMethod.GET)
     public void authImage(HttpServletResponse response,HttpSession session) throws IOException {
 
 
@@ -233,7 +233,7 @@ public class UserController {
 
 
     //验证验证码
-    @RequestMapping(value = "/valid",method = RequestMethod.POST)
+    @RequestMapping(value = "/past/valid",method = RequestMethod.POST)
     @ResponseBody
     public Wrapper validImage(HttpServletRequest request, String code, @SessionAttribute("verCode") Object verCode,HttpSession session){
         System.out.println("来了Valid******************");
@@ -265,7 +265,7 @@ public class UserController {
 
 
     //异步处理用户名重复提示
-    @RequestMapping(value = "/checkName",method = RequestMethod.POST)
+    @RequestMapping(value = "/past/checkName",method = RequestMethod.POST)
     @ResponseBody
     public ResponseResult<Void> checkUserLoginName(String userName){
         ResponseResult<Void> rr=new ResponseResult<Void>();
@@ -290,7 +290,7 @@ public class UserController {
 
     //处理用户上传的注册信息
     //注册成功后，先登录 然后完善个人信息包括用户名，昵称，。。。。
-    @RequestMapping(value = "/userRegAction")
+    @RequestMapping(value = "/past/userRegAction")
     public String UserRegistrationAction(String LoginName,String PassWord){
         Customer customer=new Customer();
         customer.setLoginName(LoginName);
@@ -344,7 +344,7 @@ public class UserController {
      * 找到对应的用户删除他
      *
      * */
-    @RequestMapping("/exit")
+    @RequestMapping("past/exit")
     public String userExitAction(HttpSession session){
         session.invalidate();
 

@@ -42,7 +42,7 @@
         $.ajax({
             //5个key-value
             //alert(obj)因为页面上不能显示成功失败，所以弹框显示
-            "url":"${pageContext.request.contextPath}/checkName",
+            "url":"${pageContext.request.contextPath}/past/checkName",
             "data":"userName="+$("#uid").val(),
             "type":"POST",
             "dataType":"json",

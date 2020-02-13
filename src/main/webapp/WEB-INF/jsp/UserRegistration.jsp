@@ -24,13 +24,14 @@
                 <span class="sel">商城用户注册</span>
             </div>
             <ul class="zc_three">
-                <form method="post" action="/userRegAction">
+                <form method="post" action="/past/userRegAction">
             	<li><input type="text" class="txt txt_tell" name="LoginName" placeholder="请输入用户名" id="uid" onblur="CheckUserName();"/></li>
 
                 <li><input type="text" class="txt txt_yzm"  id="verCode" placeholder="请输入验证码"  onblur="yanzheng()"/>
                 	<!--<input type="button" class="btn_yzm" value="获取验证码" />-->
                     <!--<button id="validImage">验证</button>-->
-                    <img id="img" src="/image"  onclick="changeImg()"/>
+                    <img id="img" src="/past/image"  onclick="changeImg()"/>
+                    <img id="img" src="/past/image"  onclick="changeImg()"/>
                     <%--<button  type="button" onclick="yanzheng();" >验证</button>--%>
                     <label type="button" onclick="changeImg();" style="background-color: #B16569">点我换图片</label>
                 </li>
@@ -55,13 +56,13 @@
          $.ajax({
              //5个key-value
              //alert(obj)因为页面上不能显示成功失败，所以弹框显示
-             "url":"${pageContext.request.contextPath}/image",
+             "url":"${pageContext.request.contextPath}/past/image",
              "type":"GET",
 
              "success":function(data){
                  /!* alert(data.attr(data));*!/
 
-                 $("#img").attr("src","/image?date=" + new Date().getTime());
+                 $("#img").attr("src","/past/image?date=" + new Date().getTime());
 
              }
          });
@@ -233,7 +234,7 @@
         $.ajax({
             //5个key-value
             //alert(obj)因为页面上不能显示成功失败，所以弹框显示
-            "url":"${pageContext.request.contextPath}/valid",
+            "url":"${pageContext.request.contextPath}/past/valid",
             "data":"code="+$("#verCode").val(),
             "type":"POST",
             "dataType":"json",
@@ -260,7 +261,7 @@
         $.ajax({
             //5个key-value
             //alert(obj)因为页面上不能显示成功失败，所以弹框显示
-            "url":"${pageContext.request.contextPath}/checkName",
+            "url":"${pageContext.request.contextPath}/past/checkName",
             "data":"userName="+$("#uid").val(),
             "type":"POST",
             "dataType":"json",

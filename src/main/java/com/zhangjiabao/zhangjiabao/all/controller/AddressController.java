@@ -23,7 +23,7 @@ public class AddressController {
      *
      *
      * */
-    @RequestMapping("/showAddress")
+    @RequestMapping("/past/showAddress")
     @ResponseBody
     public ResponseResult<List<AddressOnlyChengShi>> getAddressOnlyChengShi(){
         ResponseResult<List<AddressOnlyChengShi>> rr=new ResponseResult<>();
@@ -37,7 +37,7 @@ public class AddressController {
 
     }
 
-    @RequestMapping("showAddress/city")
+    @RequestMapping("/past/showAddress/city")
     @ResponseBody
     public ResponseResult<List<AddressOnlyChengShi>> getCityAddressOnlyChengShi(String AREAPARENTID){
 
@@ -52,7 +52,7 @@ public class AddressController {
     }
 
 
-    @RequestMapping("showAddress/county")
+    @RequestMapping("/past/showAddress/county")
     @ResponseBody
     public ResponseResult<List<AddressOnlyChengShi>> getCountyAddressOnlyChengShi(String county){
 
@@ -73,7 +73,7 @@ public class AddressController {
      *
      *
      * */
-    @RequestMapping("showAddress/school")
+    @RequestMapping("/past/showAddress/school")
     @ResponseBody
     public ResponseResult<List<School>>getAllSchoolInfo(){
         ResponseResult<List<School>> rr=new ResponseResult<>();

@@ -195,7 +195,7 @@
     //获取用户已有地址列表
     function getAllAddress(){
         $.ajax({
-            "url":"${pageContext.request.contextPath}/showAddress",
+            "url":"${pageContext.request.contextPath}/past/showAddress",
             "data":"",
             "type":"GET",
             "dataType":"json",
@@ -252,7 +252,7 @@
     //通过选择省份触发事件获取城市列表
     function getCityFun(provinceCode,cityCode,areaCode){
         $.ajax({
-            "url":"${pageContext.request.contextPath}/showAddress/city",
+            "url":"${pageContext.request.contextPath}/past/showAddress/city",
             "data":"AREAPARENTID="+provinceCode,
             "type":"GET",
             "dataType":"json",
@@ -279,7 +279,7 @@
     //通过城市选择触发事件获取地区列表
     function getAreaFun(cityCode,areaCode){
         $.ajax({
-            "url":"${pageContext.request.contextPath}/showAddress/county",
+            "url":"${pageContext.request.contextPath}/past/showAddress/county",
             "data":"county="+cityCode,
             "type":"GET",
             "dataType":"json",
@@ -316,7 +316,7 @@
     //处理异步学校
    function getSchool(schId) {
        $.ajax({
-           "url": "${pageContext.request.contextPath}/showAddress/school",
+           "url": "${pageContext.request.contextPath}/past/showAddress/school",
            "data": "",
            "type": "GET",
            "dataType": "json",
