@@ -1,8 +1,8 @@
 package com.zhangjiabao.zhangjiabao.all.service;
 
 import com.zhangjiabao.zhangjiabao.all.bean.Customer;
-import com.zhangjiabao.zhangjiabao.all.bean.CustomerInfo;
 import com.zhangjiabao.zhangjiabao.all.bean.Customer_addr;
+import com.zhangjiabao.zhangjiabao.all.bean.Customer_info;
 import com.zhangjiabao.zhangjiabao.all.mapper.CustomerMapper;
 import com.zhangjiabao.zhangjiabao.all.service.ex.CustomerLoginNameAlreayException;
 import com.zhangjiabao.zhangjiabao.all.service.ex.PassWordErrorException;
@@ -120,10 +120,10 @@ public class CustomerService implements CustomerServiceAPI{
     }
 
     @Override
-    public void InsertCustomerIfo(CustomerInfo customerInfo, Customer_addr customer_addr) {
-       if (customerInfo!=null && customer_addr!=null) {
+    public void InsertCustomerIfo(Customer_info Customer_info, Customer_addr customer_addr) {
+       if (Customer_info!=null && customer_addr!=null) {
            customerMapper.addCustomer_addr(customer_addr);
-           customerMapper.addCustomerInfo(customerInfo);
+           customerMapper.addCustomer_info(Customer_info);
        }else{
            throw new RuntimeException("个人信息不存在");
        }

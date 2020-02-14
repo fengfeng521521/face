@@ -4,111 +4,41 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zhangjiabao.zhangjiabao.all.mapper.ProductMapperAPI">
 
-    <!--品牌信息表-->
-    <insert id="insertProductBrandInfo" parameterType="com.zhangjiabao.zhangjiabao.all.bean.Product_brand_info">
-        insert into  product_brand_info values (#{brand_id},#{brand_name},#{telephone},#{brand_web},#{brand_logo},#{brand_desc},#{brand_status},#{brand_order},#{modified_time});
-    </insert>
-    <select id="selectProductBrandInfoByBrandInfo" resultType="com.zhangjiabao.zhangjiabao.all.bean.Product_brand_info">
-        select * from  product_brand_info;
-    </select>
 
 
-
-    <!--分类信息表-->
-    <insert id="insertProductCategory" parameterType="com.zhangjiabao.zhangjiabao.all.bean.Product_category">
-        insert into  product_category values (#{category_id},#{category_name},#{category_code},#{parent_id},#{category_level},#{category_status},#{modified_time});
-    </insert>
-
-    <!--selectProductCategoryByThreeCategoryId-->
-    <!--查询分类信息通过商品三级分类-->
-    <select id="selectProductCategoryByThreeCategoryId" parameterType="java.lang.String" resultType="com.zhangjiabao.zhangjiabao.all.bean.Product_category">
-        select * from  product_category where category_code=#{category_code};
-    </select>
-
-
+    <!--  private Integer product_id;
+    private String product_name;
+    private Integer brand_id;
+    private Integer category_id;
+    private Integer supplier_id;
+    private String picurl;
+    private Double price;
+    private Integer state;
+    private String descript;
+    private String modified_time;
+-->
 
 
+    <resultMap id="BaseResultMap" type="com.zhangjiabao.zhangjiabao.all.bean.Product_info" >
+        <id column="product_id" property="product_id" jdbcType="INTEGER" />
+        <result column="product_name" property="product_name" jdbcType="VARCHAR" />
+        <result column="brand_id" property="brand_id" jdbcType="INTEGER" />
+        <result column="category_id" property="category_id" jdbcType="INTEGER" />
+        <result column="supplier_id" property="supplier_id" jdbcType="INTEGER" />
 
-    <!--供应商信息表-->
-    <insert id="insertProductSupplierInfo" parameterType="com.zhangjiabao.zhangjiabao.all.bean.Product_supplierinfo">
-        insert into  product_supplierinfo values (#{supplier_id},#{infosupid},#{supplier_code},#{supplier_name},#{supplier_type},#{link_man},#{phone_number},#{bank_name},#{bank_account},#{address},#{supplier_status},#{modified_time});
-    </insert>
-    <!--通过关系id查询供应商-->
-    <select id="selectProductSupplierinfobyInfosupid" resultType="com.zhangjiabao.zhangjiabao.all.bean.Product_supplierinfo" parameterType="java.lang.Integer">
-        select * from  product_supplierinfo where infosupid=#{infosupid};
-    </select>
-    <!--通过商品id查询商品与商品供应商的关系表-->
-    <select id="selectProductInfoSupp" parameterType="java.lang.Integer" resultType="com.zhangjiabao.zhangjiabao.all.bean.Product_info_supp">
-     select * from product_info_supp where product_id=#{product_id};
-    </select>
+        <result column="picurl" property="picurl" jdbcType="VARCHAR" />
+        <result column="price" property="price" jdbcType="DOUBLE" />
+        <result column="state" property="state" jdbcType="INTEGER" />
+        <result column="descript" property="descript" jdbcType="VARCHAR" />
+        <result column="modified_time" property="modified_time" jdbcType="VARCHAR" />
 
 
 
 
-
-
-    <!--商品评论表-->
-    <insert id="insertProductComment" parameterType="com.zhangjiabao.zhangjiabao.all.bean.Product_comment">
-        insert into  product_comment values (#{comment_id},#{product_id},#{order_id},#{customer_id},#{title},#{content},#{audit_status},#{audit_time},#{modified_time});
-    </insert>
-    <!--搜索商品评论表 -->
-    <select id="selectProductCommentByProductId" resultType="com.zhangjiabao.zhangjiabao.all.bean.Product_comment" parameterType="java.lang.Integer">
-        select * from  product_comment where product_id=#{product_id};
-    </select>
-
-
-
-
-
-
-    <!--商品信息表-->
-    <insert id="insertProductInfo" parameterType="com.zhangjiabao.zhangjiabao.all.bean.Product_info">
-        insert into  product_info values (#{product_id},#{product_core},#{product_name},#{bar_code},#{brand_id},#{one_category_id},#{two_category_id},#{three_category_id},#{supplier_id},#{price},#{average_cost},#{publish_status},#{audit_status},#{weight},#{length},#{height},#{width},#{color_type},#{production_date},#{shelf_life},#{descript},#{indate},#{modified_time});
-    </insert>
-    <!--显示商品信息 -->
-    <select id="selectAllProductInfo" resultType="com.zhangjiabao.zhangjiabao.all.bean.Product_info">
-        select * from  product_info;
-    </select>
-
-
-
-
-
-
-    <!--商品图片表-->
-    <insert id="insertProductPicinfo" parameterType="com.zhangjiabao.zhangjiabao.all.bean.Product_pic_info">
-        insert into  product_pic_info values (#{product_pic_id},#{product_id},#{pic_desc},#{pic_url},#{is_master},#{pic_order},#{pic_status},#{modified_time});
-    </insert>
-    <!--显示图片表 -->
-    <select id="selectProductPicInfoByProductId" resultType="com.zhangjiabao.zhangjiabao.all.bean.Product_pic_info" parameterType="java.lang.Integer">
-        select * from  product_pic_info where product_id=#{product_id};
-    </select>
-
-
-
-    <!--多表关联的查询 这个是商家与商品的关系表里面包含库存信息-->
-
-    <!--<resultMap id="JoinsuitMap" type="com.zhangjiabao.zhangjiabao.all.bean.Product_info" extends="BaseResultMap" >
-        <association property="suitobj" javaType="Suit">
-            <id column="strSuitCode" property="strsuitcode" jdbcType="VARCHAR" />
-            <result column="strSuitName" property="strsuitname" jdbcType="VARCHAR" />
-            <result column="higerSuit" property="higersuit" jdbcType="VARCHAR" />
-            <association property="suit" javaType="Suit">
-                <id column="pstrSuitCode" property="strsuitcode" jdbcType="VARCHAR" />
-                <result column="pstrSuitName" property="strsuitname" jdbcType="VARCHAR" />
-                <result column="phigerSuit" property="higersuit" jdbcType="VARCHAR" />
-            </association>
-        </association>
     </resultMap>
-
-
-    <resultMap id="BaseResultMap" type="com.zhangjiabao.zhangjiabao.all.bean.Product_info_supp" >
-        <id column="infosupid" property="infosupid" jdbcType="int" />
-        <result column="supplier_id" property="supplier_id" jdbcType="int" />
-        <result column="product_id" property="product_id" jdbcType="int" />
-        <result column="stock_sum" property="stock_sum" jdbcType="int" />
-        <result column="modified_time" property="modified_time" jdbcType="datetime" />
-    </resultMap>-->
+    <select id="selectAllProductInfo" resultType="com.zhangjiabao.zhangjiabao.all.bean.Product_info" resultMap="BaseResultMap">
+        select * from product_info;
+    </select>
 
 
 

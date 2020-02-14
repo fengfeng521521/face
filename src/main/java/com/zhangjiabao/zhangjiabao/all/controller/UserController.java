@@ -364,7 +364,7 @@ public class UserController {
 
 
         //个人信息修改
-        CustomerInfo customerInfo=new CustomerInfo();
+        Customer_info Customer_info=new Customer_info();
 
 
         //个人信息的地址省县区
@@ -373,20 +373,20 @@ public class UserController {
 
 
 
-        customerInfo.setCustomer_id(Integer.parseInt(customer_id));
-        customerInfo.setSchool_name(school_name);
-        customerInfo.setCustomer_name(customer_name);
-        customerInfo.setIdentity_card_type(0);
-        customerInfo.setIdentity_card_no(identity_card_no);
-        customerInfo.setMobile_phone(Integer.parseInt(mobile_phone));
-        customerInfo.setCustomer_email(customer_email);
-        customerInfo.setGender(gender);
-        customerInfo.setUser_point(0);
-        customerInfo.setRegister_time(new Timestamp(new Date().getTime()));
-        customerInfo.setWeixin(weixin);
-        customerInfo.setCustomer_level(1);
-        customerInfo.setUser_money(new BigDecimal(0.00));
-        customerInfo.setModified_time(new Timestamp(new Date().getTime()));
+        Customer_info.setCustomer_id(Integer.parseInt(customer_id));
+        Customer_info.setSchool_name(school_name);
+        Customer_info.setCustomer_name(customer_name);
+        Customer_info.setIdentity_card_type(0);
+        Customer_info.setIdentity_card_no(identity_card_no);
+        Customer_info.setMobile_phone(Integer.parseInt(mobile_phone));
+        Customer_info.setCustomer_email(customer_email);
+        Customer_info.setGender(gender);
+        Customer_info.setUser_point(0);
+        Customer_info.setRegister_time(new Timestamp(new Date().getTime()));
+        Customer_info.setWeixin(weixin);
+        Customer_info.setCustomer_level(1);
+        Customer_info.setUser_money(new BigDecimal(0.00));
+        Customer_info.setModified_time(new Timestamp(new Date().getTime()));
 
         customer_addr.setAddress(address);
         customer_addr.setCity(Integer.parseInt(city));
@@ -400,7 +400,7 @@ public class UserController {
 
 
         try {
-            customerService.InsertCustomerIfo(customerInfo,customer_addr);
+            customerService.InsertCustomerIfo(Customer_info,customer_addr);
         }
         catch (Exception e){
             System.out.println(e.getMessage());

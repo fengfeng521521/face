@@ -79,101 +79,29 @@
         </div>
     </div>
     <ul class="cp_four">
-    	<li>
-        	<div class="img">
-            	<span class="da"></span>
-            	<a href="#"><img src="../../static/images/002.jpg" /></a>
-            </div>
-        	<h1><a href="#">LUXE LIP 纯色奢金唇膏</a></h1>
-            <p>¥250.00</p>
-        </li>
+
+
+        <c:forEach var="p" items="${product_infos}" >
+            <li>
+                <div class="img">
+                    <span class="da"></span>
+                    <a href="#"><img src="../../${p.picurl}" /></a>
+                </div>
+                <h1><a href="#">${p.product_name}</a></h1>
+                <p>¥${p.price}</p>
+            </li>
+
+
+        </c:forEach>
+
+
         <li>
         	<div class="img">
             	<span class="da"></span>
             	<a href="#"><img src="../../static/images/002.jpg" /></a>
             </div>
         	<h1><a href="#">LUXE LIP 纯色奢金唇膏</a></h1>
-            <p>¥250.00</p>
-        </li>
-        <li>
-        	<div class="img">
-            	<span class="da"></span>
-            	<a href="#"><img src="../../static/images/002.jpg" /></a>
-            </div>
-        	<h1><a href="#">LUXE LIP 纯色奢金唇膏</a></h1>
-            <p>¥250.00</p>
-        </li>
-        <li>
-        	<div class="img">
-            	<span class="da"></span>
-            	<a href="#"><img src="../../static/images/002.jpg" /></a>
-            </div>
-        	<h1><a href="#">LUXE LIP 纯色奢金唇膏</a></h1>
-            <p>¥250.00</p>
-        </li>
-        <li>
-        	<div class="img">
-            	<span class="da"></span>
-            	<a href="#"><img src="../../static/images/002.jpg" /></a>
-            </div>
-        	<h1><a href="#">LUXE LIP 纯色奢金唇膏</a></h1>
-            <p>¥250.00</p>
-        </li>
-        <li>
-        	<div class="img">
-            	<span class="da"></span>
-            	<a href="#"><img src="../../static/images/002.jpg" /></a>
-            </div>
-        	<h1><a href="#">LUXE LIP 纯色奢金唇膏</a></h1>
-            <p>¥250.00</p>
-        </li>
-        <li>
-        	<div class="img">
-            	<span class="da"></span>
-            	<a href="#"><img src="../../static/images/002.jpg" /></a>
-            </div>
-        	<h1><a href="#">LUXE LIP 纯色奢金唇膏</a></h1>
-            <p>¥250.00</p>
-        </li>
-        <li>
-        	<div class="img">
-            	<span class="da"></span>
-            	<a href="#"><img src="../../static/images/002.jpg" /></a>
-            </div>
-        	<h1><a href="#">LUXE LIP 纯色奢金唇膏</a></h1>
-            <p>¥250.00</p>
-        </li>
-        <li>
-        	<div class="img">
-            	<span class="da"></span>
-            	<a href="#"><img src="../../static/images/002.jpg" /></a>
-            </div>
-        	<h1><a href="#">LUXE LIP 纯色奢金唇膏</a></h1>
-            <p>¥250.00</p>
-        </li>
-        <li>
-        	<div class="img">
-            	<span class="da"></span>
-            	<a href="#"><img src="../../static/images/002.jpg" /></a>
-            </div>
-        	<h1><a href="#">LUXE LIP 纯色奢金唇膏</a></h1>
-            <p>¥250.00</p>
-        </li>
-        <li>
-        	<div class="img">
-            	<span class="da"></span>
-            	<a href="#"><img src="../../static/images/002.jpg" /></a>
-            </div>
-        	<h1><a href="#">LUXE LIP 纯色奢金唇膏</a></h1>
-            <p>¥250.00</p>
-        </li>
-        <li>
-        	<div class="img">
-            	<span class="da"></span>
-            	<a href="#"><img src="../../static/images/002.jpg" /></a>
-            </div>
-        	<h1><a href="#">LUXE LIP 纯色奢金唇膏</a></h1>
-            <p>¥250.00</p>
+            <p>¥25000000000000.00</p>
         </li>
     </ul>
     <div class="page">

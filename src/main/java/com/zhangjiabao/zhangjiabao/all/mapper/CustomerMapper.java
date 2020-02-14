@@ -1,7 +1,7 @@
 package com.zhangjiabao.zhangjiabao.all.mapper;
 
 import com.zhangjiabao.zhangjiabao.all.bean.Customer;
-import com.zhangjiabao.zhangjiabao.all.bean.CustomerInfo;
+import com.zhangjiabao.zhangjiabao.all.bean.Customer_info;
 import com.zhangjiabao.zhangjiabao.all.bean.Customer_addr;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -30,7 +30,7 @@ public interface CustomerMapper {
     public void upDateCustomerById(Customer customer);
 
     //增加客户信息（添加到两个表中）
-    public void addCustomerInfo(CustomerInfo customerInfo);
+    public void addCustomer_info(Customer_info Customer_info);
     public void addCustomer_addr(Customer_addr customer_addr);
 
 }

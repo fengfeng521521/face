@@ -19,13 +19,13 @@
                     </c:if>  </div>
             <div class="right">
                 <a href="${pageContext.request.contextPath }/ShoppingCart" class="agwc">购物车</a>|<a href="${pageContext.request.contextPath }/MyCollection" class="azh">我的账户</a>
-                <c:if test="${customer!=null }"><a href="${pageContext.request.contextPath}/exit">退出!</a></c:if>
+                <c:if test="${customer!=null }"><a href="${pageContext.request.contextPath}/past/exit">退出!</a></c:if>
             </div>
         </div>
 
     </div>
     <div class="main">
-        <div class="logo"><a href="/ProductList"><img src="../../static/images/logo.jpg" /></a></div>
+        <div class="logo"><a href="/showAllProductInfo"><img src="../../static/images/logo.jpg" /></a></div>
         <div class="search">
             <div class="left">
                 <a href="#">超值</a>|<a href="#">九成新</a>|<a href="#">老板打折</a>|<a href="#">购买抽奖</a>|<a href="#">自行车</a>

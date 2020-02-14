@@ -1,6 +1,5 @@
 package com.zhangjiabao.zhangjiabao.all.bean;
 
-import java.util.Date;
 import java.util.Objects;
 
 public class Product_info_supp {
@@ -14,7 +13,7 @@ public class Product_info_supp {
     private Integer supplier_id;
     private Integer product_id;
     private Integer stock_sum;
-    private Date modified_time;
+    private String modified_time;
 
     public Integer getInfosupid() {
         return infosupid;
@@ -48,11 +47,11 @@ public class Product_info_supp {
         this.stock_sum = stock_sum;
     }
 
-    public Date getModified_time() {
+    public String getModified_time() {
         return modified_time;
     }
 
-    public void setModified_time(Date modified_time) {
+    public void setModified_time(String modified_time) {
         this.modified_time = modified_time;
     }
 
@@ -71,16 +70,5 @@ public class Product_info_supp {
     @Override
     public int hashCode() {
         return Objects.hash(infosupid, supplier_id, product_id, stock_sum, modified_time);
-    }
-
-    @Override
-    public String toString() {
-        return "Product_info_supp{" +
-                "infosupid=" + infosupid +
-                ", supplier_id=" + supplier_id +
-                ", product_id=" + product_id +
-                ", stock_sum=" + stock_sum +
-                ", modified_time=" + modified_time +
-                '}';
     }
 }

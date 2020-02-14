@@ -30,7 +30,7 @@
                 <li><input type="text" class="txt txt_yzm"  id="verCode" placeholder="请输入验证码"  onblur="yanzheng()"/>
                 	<!--<input type="button" class="btn_yzm" value="获取验证码" />-->
                     <!--<button id="validImage">验证</button>-->
-                    <img id="img" src="/past/image"  onclick="changeImg()"/>
+
                     <img id="img" src="/past/image"  onclick="changeImg()"/>
                     <%--<button  type="button" onclick="yanzheng();" >验证</button>--%>
                     <label type="button" onclick="changeImg();" style="background-color: #B16569">点我换图片</label>

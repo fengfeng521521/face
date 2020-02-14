@@ -1,7 +1,7 @@
 package com.zhangjiabao.zhangjiabao.all.service;
 
 import com.zhangjiabao.zhangjiabao.all.bean.Customer;
-import com.zhangjiabao.zhangjiabao.all.bean.CustomerInfo;
+import com.zhangjiabao.zhangjiabao.all.bean.Customer_info;
 import com.zhangjiabao.zhangjiabao.all.bean.Customer_addr;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ public interface CustomerServiceAPI {
     public boolean isCheckUserLoginName(String loginName);
 
     public Customer toSignIn(String LoginName,String PassWord);
-    public void InsertCustomerIfo(CustomerInfo customerInfo, Customer_addr customer_addr);
+    public void InsertCustomerIfo(Customer_info Customer_info, Customer_addr customer_addr);
 
 
 }
